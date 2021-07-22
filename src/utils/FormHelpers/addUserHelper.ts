@@ -1,10 +1,10 @@
-import { inputsVal } from "../../ui/components/Form";
+import { idNewUser, inputsVal } from "../../ui/components/Form";
 import {ThunkDispatch as Dispatch} from 'redux-thunk';
 import { addUser } from "../../store";
 
 const createNewIdForTheNewUser = (
   usersIdList: number[],
-  setNewId: (value: number | ((prevVar: number) => number)) => void
+  setNewId: React.Dispatch<React.SetStateAction<idNewUser>>,
   ) => {
   let largest= 0;
   for (let i=0; i<=largest;i++){

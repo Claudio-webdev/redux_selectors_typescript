@@ -8,9 +8,10 @@ export interface inputsVal {
   name: string,
   surname: string
 }
+export type idNewUser = number
 function Form() {
   const [inputsValue, setInputsValue] = useState<inputsVal>({ name: '', surname: ''})
-  const [newId, setNewId] = useState(0)
+  const [newId, setNewId] = useState<idNewUser>(0)
   const dispatch = useDispatch()
   const usersIdList = useSelector(getUsersId)
 
